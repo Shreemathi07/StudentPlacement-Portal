@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Placement Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            color: #1e293b;
+        }
+
+        header {
+            background: #123b70;
+            color: white;
+            padding: 24px 7%;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #dbeafe;
+        }
+
+        nav {
+            background: #0b2545;
+            padding: 14px 7%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+        }
+
+        .container {
+            width: 86%;
+            margin: 30px auto;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 5px solid #2563eb;
+        }
+
+        .welcome h2 {
+            margin-bottom: 10px;
+            color: #123b70;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 23px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h3 {
+            color: #475569;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .number {
+            color: #2563eb;
+            font-size: 29px;
+            font-weight: bold;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        section h2 {
+            color: #123b70;
+            margin-bottom: 18px;
+        }
+
+        .companies {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .company h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .company p {
+            margin: 7px 0;
+            font-size: 14px;
+        }
+
+        .drive {
+            background: white;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 9px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .drive h3 {
+            margin-bottom: 10px;
+        }
+
+        .drive p {
+            margin: 7px 0;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .students {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .student h3 {
+            margin-bottom: 10px;
+        }
+
+        .student p {
+            margin: 7px 0;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #0b2545;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            margin-top: 35px;
+        }
+
+        @media (max-width: 800px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .companies,
+            .students {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 12px 5px 0;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Placement Portal</h1>
+        <p>University Placement Cell | Career Opportunities and Campus Recruitment</p>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#companies">Companies</a>
+        <a href="#drives">Recruitment Drives</a>
+        <a href="#students">Student Profiles</a>
+        <a href="#eligibility">Eligibility</a>
+    </nav>
+
+    <main class="container">
+
+        <div class="welcome" id="dashboard">
+            <h2>Welcome to the Placement Dashboard</h2>
+            <p>Explore placement opportunities, discover companies, review eligibility
+            requirements, and stay updated with upcoming campus recruitment drives.</p>
+        </div>
+
+        <section>
+            <h2>Placement Statistics</h2>
+
+            <div class="stats">
+                <div class="card">
+                    <h3>Registered Students</h3>
+                    <p class="number">1,250</p>
+                </div>
+
+                <div class="card">
+                    <h3>Students Placed</h3>
+                    <p class="number">920</p>
+                </div>
+
+                <div class="card">
+                    <h3>Recruiting Companies</h3>
+                    <p class="number">85</p>
+                </div>
+
+                <div class="card">
+                    <h3>Highest Package</h3>
+                    <p class="number">₹24 LPA</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="companies">
+            <h2>Recruiting Companies</h2>
+
+            <div class="companies">
+                <div class="card company">
+                    <h3>TCS</h3>
+                    <p>Industry: IT Services</p>
+                    <p>Role: Graduate Trainee</p>
+                    <p>Eligibility: B.E./B.Tech students</p>
+                    <span class="badge">Recruitment Open</span>
+                </div>
+
+                <div class="card company">
+                    <h3>Infosys</h3>
+                    <p>Industry: Information Technology</p>
+                    <p>Role: Systems Engineer</p>
+                    <p>Eligibility: Eligible engineering graduates</p>
+                    <span class="badge">Recruitment Open</span>
+                </div>
+
+                <div class="card company">
+                    <h3>Wipro</h3>
+                    <p>Industry: IT Consulting</p>
+                    <p>Role: Project Engineer</p>
+                    <p>Eligibility: Eligible engineering graduates</p>
+                    <span class="badge">Recruitment Open</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="drives">
+            <h2>Upcoming Recruitment Drives</h2>
+
+            <div class="drive">
+                <h3>TCS Campus Recruitment</h3>
+                <p>Date: 15 November 2026</p>
+                <p>Eligibility: As per the official company notification</p>
+                <p>Selection Process: Aptitude Test, Technical Interview and HR Interview</p>
+                <span class="badge">Upcoming</span>
+            </div>
+
+            <div class="drive">
+                <h3>Infosys Recruitment Drive</h3>
+                <p>Date: 20 November 2026</p>
+                <p>Eligibility: As per the official company notification</p>
+                <p>Selection Process: Online Assessment and Interviews</p>
+                <span class="badge">Upcoming</span>
+            </div>
+
+            <div class="drive">
+                <h3>Wipro Campus Drive</h3>
+                <p>Date: 25 November 2026</p>
+                <p>Eligibility: As per the official company notification</p>
+                <p>Selection Process: Online Test and Technical Interview</p>
+                <span class="badge">Upcoming</span>
+            </div>
+        </section>
+
+        <section id="students">
+            <h2>Student Profiles</h2>
+
+            <div class="students">
+                <div class="card student">
+                    <h3>Arun Kumar</h3>
+                    <p>Department: Computer Science</p>
+                    <p>CGPA: 8.7</p>
+                    <p>Skills: Java, SQL, Web Development</p>
+                    <span class="badge">Placed</span>
+                </div>
+
+                <div class="card student">
+                    <h3>Priya Sharma</h3>
+                    <p>Department: Information Technology</p>
+                    <p>CGPA: 9.1</p>
+                    <p>Skills: Python, Data Analytics</p>
+                    <span class="badge">Placed</span>
+                </div>
+
+                <div class="card student">
+                    <h3>Rahul Verma</h3>
+                    <p>Department: Software Engineering</p>
+                    <p>CGPA: 8.2</p>
+                    <p>Skills: HTML, CSS, JavaScript</p>
+                    <span class="badge">Seeking Opportunities</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="eligibility">
+            <h2>General Eligibility Guidelines</h2>
+
+            <div class="card">
+                <p>1. Students must satisfy the eligibility criteria published by the company.</p>
+                <br>
+                <p>2. Academic requirements and minimum CGPA vary by recruiter.</p>
+                <br>
+                <p>3. Students must register before the recruitment deadline.</p>
+                <br>
+                <p>4. Students must attend the assessments and interviews specified by the company.</p>
+                <br>
+                <p>5. Final eligibility must be confirmed using the official recruitment notification.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Placement Portal | University Placement Cell | 2026</p>
+    </footer>
+
+</body>
+</html>
